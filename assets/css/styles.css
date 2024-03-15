@@ -3,7 +3,9 @@
     --grey: #999999;
     --darkGrey: #333333;
     --black: #000000;
+
 }
+
 
 
 /* ------------- Header ------------- */
@@ -24,7 +26,17 @@ nav {
 
 
 /* ------------- Main ------------- */
+main {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px;
+}
 
+
+aside {
+    visibility: hidden;
+    height: 0;
+}
 
 
 
