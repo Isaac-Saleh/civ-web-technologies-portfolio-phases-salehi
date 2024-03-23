@@ -59,6 +59,12 @@ main h4 {
     padding: 5px;
 }
 
+main article {
+    margin: 10px;
+    padding: 10px;
+    border: 3px solid var(--black);
+}
+
 main p {
     padding-bottom: 15px;
 }
@@ -74,6 +80,9 @@ aside {
 /* ------------- Footer ------------- */
 
 body:nth-child(2) > footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -81,6 +90,9 @@ body:nth-child(2) > footer {
     padding: 5px 10px;
     height: 80px;
     background-color: var(--lightGrey);
+    margin-top: 40px;
+
+
 }
 
 
@@ -128,11 +140,26 @@ body:nth-child(2) > footer {
         align-items: stretch;
         width: 80%;
         flex-direction: row;
-        /*border: 2px solid purple;*/
+        border: 2px solid purple;
     }
 
+    article {
+        display: flex;
+        flex-direction: column;
+        /*flex-flow: wrap;*/
+        flex-basis: 45%;
+
+    }
+
+    .main-content {
+        justify-content: space-between;
+        display: flex;
+        border: 1px solid red;
+        flex-direction: row;
+        flex-wrap: wrap;
 
 
+    }
 
     aside {
         min-width: 250px;
@@ -152,6 +179,7 @@ body:nth-child(2) > footer {
     /* ------------- DeskTop-Footer ------------- */
 
     footer {
+
         margin-top: 40px;
         font-size: smaller;
     }
