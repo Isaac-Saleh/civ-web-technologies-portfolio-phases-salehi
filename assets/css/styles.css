@@ -8,8 +8,10 @@
 
 
 
-/* ------------- Header ------------- */
-/*body:nth-child(2) > header*/
+/* ------------------------------------ Header ------------------------------------ */
+
+
+
 .top-section {
     width: 100%;
 }
@@ -26,28 +28,30 @@
     background-color: var(--darkGrey);
 }
 
-
-
 nav {
     visibility: hidden;
     height: 0;
-
 }
 
-/* Hamburger menu to be added to mobile first option */
+
+
+/* ------------------------------------ Main ------------------------------------ */
 
 
 
-/* ------------- Main ------------- */
 body{
     height: 100%;
+}
+
+body:nth-child(2) > h3 {
+    padding-top: 10px;
 }
 
 h3 {
     text-align: left;
     font-size: 1.5rem;
     font-weight: bolder;
-    margin: 10px;
+
 }
 
 main {
@@ -59,7 +63,7 @@ main {
 main header {
     font-weight: bolder;
     text-align: left;
-    padding: 8px;
+
 }
 
 main h4 {
@@ -94,7 +98,7 @@ aside {
 
 
 
-/* ------------- Footer ------------- */
+/* ------------------------------------ Footer ------------------------------------ */
 
 body:nth-child(2) > footer {
     width: 100%;
@@ -112,13 +116,16 @@ body:nth-child(2) > footer {
 
 
 
-/* ------------- DeskTop Layout ------------- */
+/* ------------------------------------ DeskTop Layout ------------------------------------ */
 
 
 
 @media screen and (min-width: 1200px) {
 
-    /* ------------- DeskTop-Header ------------- */
+
+    /* ------------------------------------ DeskTop-Header ------------------------------------ */
+
+
     .top-section {
         position: fixed;
         top: 0;
@@ -127,7 +134,6 @@ body:nth-child(2) > footer {
     .top-section > header {
         justify-content: center;
         font-size: 1.5em;
-
     }
 
     nav {
@@ -135,13 +141,8 @@ body:nth-child(2) > footer {
         height: auto;
         padding: 20px;
         background-color: var(--lightGrey);
-
-
-
-
-
-
     }
+
     nav > ul {
         display: flex;
         flex-direction: row;
@@ -152,14 +153,14 @@ body:nth-child(2) > footer {
     }
 
 
-    /* ------------- DeskTop-Main ------------- */
+
+    /* ------------------------------------ DeskTop-Main ------------------------------------ */
 
 
-    /* Create two containers that have the aside on the right */
 
-    h3 {
+    body:nth-child(2) > h3 {
         text-align: center;
-        padding-top: 120px;
+        padding-top: 150px;
     }
 
     main header {
@@ -173,32 +174,24 @@ body:nth-child(2) > footer {
         align-items: stretch;
         width: 80%;
         flex-direction: row;
-        /*border: 2px solid purple;*/
     }
 
     article {
-
         display: flex;
         flex-direction: column;
-        /*flex-flow: wrap;*/
         width: 40%;
         flex-basis: auto;
-
     }
 
     .main-content {
-
-        /*border: 1px solid red;*/
         flex-direction: row;
         flex-wrap: wrap;
-
-
-
     }
 
     aside {
         min-width: 250px;
         width: auto;
+        justify-content: start;
         display: flex;
         flex-direction: column;
         visibility: visible;
@@ -208,13 +201,27 @@ body:nth-child(2) > footer {
         padding: 10px;
     }
 
+    aside h3 {
+        text-align: left;
+        padding: 5px;
+    }
+
+    aside section section {
+        padding-left: 10px;
+    }
+
+    aside section footer{
+        margin-bottom: 20px;
+        padding:  5px;
+    }
 
 
 
-    /* ------------- DeskTop-Footer ------------- */
+    /* ------------------------------------ DeskTop-Footer ------------------------------------  */
 
-    footer {
 
+
+    body:nth-child(2) > footer {
         margin-top: 40px;
         font-size: smaller;
     }
@@ -224,6 +231,5 @@ body:nth-child(2) > footer {
         top: 0;
         width: 100%;
     }
-
 
 }
