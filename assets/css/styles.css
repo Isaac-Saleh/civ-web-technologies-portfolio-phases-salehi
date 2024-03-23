@@ -22,15 +22,45 @@ body:nth-child(2) > header {
 nav {
     visibility: hidden;
     height: 0;
+
 }
+
+/* Hamburger menu to be added to mobile first option */
 
 
 
 /* ------------- Main ------------- */
+body{
+    height: 100%;
+}
+
+h3 {
+    text-align: left;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    margin: 10px;
+}
+
 main {
     display: flex;
     flex-direction: column;
     padding: 10px 20px;
+}
+
+main header {
+    font-weight: bolder;
+    text-align: left;
+    padding: 8px;
+}
+
+main h4 {
+    font-style: italic;
+    font-weight: bold;
+    padding: 5px;
+}
+
+main p {
+    padding-bottom: 15px;
 }
 
 
@@ -54,7 +84,10 @@ body:nth-child(2) > footer {
 }
 
 
+
 /* ------------- DeskTop Layout ------------- */
+
+
 
 @media screen and (min-width: 1200px) {
 
@@ -74,5 +107,54 @@ body:nth-child(2) > footer {
         flex-direction: row;
         justify-content: space-evenly;
     }
+
+
+    /* ------------- DeskTop-Main ------------- */
+
+
+    /* Create two containers that have the aside on the right */
+
+    h3 {
+        text-align: center;
+    }
+
+    main header {
+        text-align: center;
+    }
+
+    main {
+        height: 100%;
+        margin: auto;
+        align-items: stretch;
+        width: 80%;
+        flex-direction: row;
+        /*border: 2px solid purple;*/
+    }
+
+
+
+
+    aside {
+        min-width: 250px;
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        visibility: visible;
+        height: auto;
+        border: 2px solid black;
+        margin: 0 0 0 20px;
+        padding: 10px;
+    }
+
+
+
+
+    /* ------------- DeskTop-Footer ------------- */
+
+    footer {
+        margin-top: 40px;
+        font-size: smaller;
+    }
+
 
 }
