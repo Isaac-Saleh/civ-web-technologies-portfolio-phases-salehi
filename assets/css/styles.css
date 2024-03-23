@@ -44,6 +44,7 @@ body{
 }
 
 body:nth-child(2) > h3 {
+    padding-left: 10px;
     padding-top: 10px;
 }
 
