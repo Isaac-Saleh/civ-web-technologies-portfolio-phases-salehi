@@ -45,6 +45,7 @@ nav {
 /* ------------------------------------ Main ------------------------------------ */
 
 
+/* -- Elements -- */
 
 body{
     height: 100%;
@@ -81,11 +82,22 @@ main h4 {
 }
 
 main article {
-    /*margin: 10px;*/
     padding: 10px;
     border: 3px solid var(--black);
 
 }
+
+main p {
+    padding-bottom: 15px;
+}
+
+aside {
+    visibility: hidden;
+    height: 0;
+}
+
+
+/* -- Classes --*/
 
 .main-content {
     justify-content: center;
@@ -94,14 +106,36 @@ main article {
     gap: 10px;
 }
 
-main p {
-    padding-bottom: 15px;
+.main-content-img {
+    padding: 12.5px;
+    display: flex;
+    flex-direction: column;
+    flex-basis: auto;
+}
+
+.story {
+    font-style: italic;
 }
 
 
-aside {
-    visibility: hidden;
-    height: 0;
+/* -- ID's -- */
+
+#image_banner {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    justify-items: center;
+
+}
+
+#image_batteries_not_included {
+    width: 100%;
+    height: auto;
+}
+
+#image_main {
+    width: auto;
+    height: auto;
 }
 
 
@@ -119,7 +153,6 @@ body:nth-child(2) > footer {
     background-color: var(--lightGrey);
     margin-top: 40px;
 
-
 }
 
 
@@ -133,16 +166,7 @@ body:nth-child(2) > footer {
 
     /* ------------------------------------ DeskTop-Header ------------------------------------ */
 
-
-    .top-section {
-        position: fixed;
-        top: 0;
-    }
-    /*body:nth-child(2) */
-    .top-section > header {
-        justify-content: center;
-        font-size: 1.5em;
-    }
+    /* -- Elements -- */
 
     nav {
         visibility: visible;
@@ -156,6 +180,19 @@ body:nth-child(2) > footer {
         flex-direction: row;
         justify-content: space-evenly;
     }
+
+    /* -- Classes -- */
+
+    .top-section {
+        position: fixed;
+        top: 0;
+    }
+
+    .top-section > header {
+        justify-content: center;
+        font-size: 1.5em;
+    }
+
     .fa-bars {
         visibility: hidden;
     }
@@ -164,7 +201,7 @@ body:nth-child(2) > footer {
 
     /* ------------------------------------ DeskTop-Main ------------------------------------ */
 
-
+    /* -- Elements -- */
 
     body:nth-child(2) > h3 {
         text-align: center;
@@ -173,6 +210,10 @@ body:nth-child(2) > footer {
 
     main header {
         text-align: center;
+    }
+
+    #image_banner {
+        width: 88%;
     }
 
     main {
@@ -189,11 +230,6 @@ body:nth-child(2) > footer {
         flex-direction: column;
         width: 40%;
         flex-basis: auto;
-    }
-
-    .main-content {
-        flex-direction: row;
-        flex-wrap: wrap;
     }
 
     aside {
@@ -223,6 +259,28 @@ body:nth-child(2) > footer {
         padding:  5px;
     }
 
+    /* -- Classes -- */
+
+    .main-content {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .main-content-img {
+        width: 40%;
+    }
+
+    /* -- ID's -- */
+
+    #image_main {
+        width: auto;
+        height: 450px;
+    }
+
+    #image_aside {
+        width: auto;
+        height: 250px;
+    }
 
 
     /* ------------------------------------ DeskTop-Footer ------------------------------------  */
