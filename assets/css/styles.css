@@ -1,8 +1,15 @@
 :root {
+    --white: #FFFFFF;
+    --lighterGrey: #e5e5e5;
+    --yellow: #fca311;
+    --navy: #14213d;
+    --black: #000000;
+
+    /*to be retired and replaced with the above colour scheme*/
     --lightGrey: #cccccc;
     --grey: #999999;
     --darkGrey: #333333;
-    --black: #000000;
+
 
 }
 
