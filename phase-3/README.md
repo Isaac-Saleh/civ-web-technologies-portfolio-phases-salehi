@@ -8,5 +8,5 @@ Colour Scheme:
 | white      | 255, 255, 255 | #FFFFFF |
 | navy       | 20, 33, 61    | #14213d |
 | yellow     | 252, 163, 17  | #fca311 |
-| light-grey | 299, 299, 299 | #e5e5e5 |
+| light-grey | 204, 204, 204 | #cccccc |
 
