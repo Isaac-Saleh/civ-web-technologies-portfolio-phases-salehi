@@ -201,8 +201,28 @@
                     <h3>Section 1</h3>
                 </header>
                 <section>
-                    <h4>Heading</h4>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores, officia.
+                    <form id="api_form">
+                        <h4 id="form_header">Pick From the following API's</h4>
+                        <input type="checkbox"
+                            id="loremipsum" name="loremipsum"
+                            value="yes"/>
+                        <label for="loremipsum">Lorem-Ipsum Generator</label>
+
+                        <input type="checkbox"
+                               id="calories_burned" name="calories_burned"
+                               value="yes"/>
+                        <label for="calories_burned">Calories Burned</label>
+
+                        <label for="form_input">Input</label>
+                        <input type="text" id="form_input"
+                            placeholder="Enter a number"/>
+
+                        <button type="submit" id="submit_button">Submit</button>
+
+                        <h4>Result</h4>
+                        <p id="api_error_message">ERROR: response unsuccessful. Please try again.</p>
+                        <output form="api_form" id="api_output"></output>
+                    </form>
                 </section>
                 <footer></footer>
             </section>

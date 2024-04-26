@@ -312,6 +312,9 @@ body:nth-child(2) > footer {
         height: 250px;
     }
 
+    #form_header{
+        font-style: normal;
+    }
 
     /* ------------------------------------ DeskTop-Footer ------------------------------------  */
 
