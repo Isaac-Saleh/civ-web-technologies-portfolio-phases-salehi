@@ -198,30 +198,34 @@
                         support suggested the issue is, 'located somewhere between the chair and the keyboard'.">
             <section>
                 <header>
-                    <h3>Section 1</h3>
+                    <h3>Generator</h3>
                 </header>
                 <section>
                     <form id="api_form">
                         <h4 id="form_header">Pick From the following API's</h4>
-                        <input type="checkbox"
-                            id="loremipsum" name="loremipsum"
-                            value="yes">
-                        <label for="loremipsum">Lorem-Ipsum Generator</label>
+                        <div id="form_checkboxes">
+                            <input type="checkbox"
+                                id="loremipsum" name="loremipsum"
+                                value="yes">
+                            <label for="loremipsum">Lorem-Ipsum Generator</label>
+                            <br>
+                            <input type="checkbox"
+                                   id="password_generator" name="password_generator"
+                                   value="yes">
+                            <label for="password_generator">Password Generator</label>
+                        </div>
+                        <div>
+                            <label for="form_input">Input</label>
+                            <input type="text" id="form_input"
+                                placeholder="Enter a number">
 
-                        <input type="checkbox"
-                               id="password_generator" name="password_generator"
-                               value="yes">
-                        <label for="password_generator">Password Generator</label>
-
-                        <label for="form_input">Input</label>
-                        <input type="text" id="form_input"
-                            placeholder="Enter a number">
-
-                        <button type="submit" id="submit_button">Submit</button>
-
-                        <h4>Result</h4>
-                        <p id="api_error_message">ERROR: response unsuccessful. Please try again.</p>
-                        <output form="api_form" id="api_output"></output>
+                            <button type="submit" id="submit_button">Submit</button>
+                        </div>
+                        <div>
+                            <h4>Result</h4>
+                            <p id="api_error_message">ERROR: response unsuccessful. Please try again.</p>
+                            <output form="api_form" id="api_output"></output>
+                        </div>
                     </form>
                 </section>
                 <footer></footer>
