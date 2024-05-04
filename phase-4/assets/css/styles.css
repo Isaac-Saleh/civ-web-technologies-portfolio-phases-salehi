@@ -95,11 +95,25 @@ main p {
     padding-bottom: 15px;
 }
 
-aside {
+main aside > section {
     visibility: hidden;
     height: 0;
 }
 
+form div {
+    /*border: solid 2px red;*/
+    margin: 5px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+#form_section{ /*For the purpose of phase 4 */
+    visibility: visible;
+    height: fit-content;
+}
 
 /* -- Classes --*/
 
@@ -125,6 +139,54 @@ aside {
 
 
 /* -- ID's -- */
+
+#form_checkboxes {
+    display: block;
+
+}
+#form_section {
+    box-shadow: 0 2px 8px var(--lightGrey);
+    padding: 5px;
+}
+#api_form {
+    font-size: large;
+    /*border: solid 2px purple;*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+}
+
+#api_form h4 {
+    font-size: large;
+}
+
+#input_div label, #input_div input, #input_div button  {
+    margin: 5px;
+    font-size: large;
+}
+
+#input_div input {
+    height: 30px;
+    width: 100%;
+    padding-left: 5px;
+}
+::placeholder {
+    padding-left: 5px;
+}
+#submit_button {
+    width: 50%;
+}
+
+#api_error_message {
+    color: red;
+    text-align: center;
+    padding-top: 5px;
+}
+
+#form_header{
+    font-style: normal;
+}
 
 #image_banner {
     width: 100%;
@@ -168,7 +230,6 @@ body:nth-child(2) > footer {
     height: 80px;
     background-color: var(--lightGrey);
     margin-top: 40px;
-
 }
 
 
@@ -267,12 +328,14 @@ body:nth-child(2) > footer {
         justify-content: start;
         display: flex;
         flex-direction: column;
-        visibility: visible;
-        height: auto;
         border: 3px solid black;
         margin: 0 0 0 20px;
         padding: 10px;
         box-shadow: 0 2px 8px var(--lightGrey);
+    }
+    main aside > section {
+        visibility: visible;
+        height: auto;
     }
 
     aside h3 {
@@ -289,15 +352,7 @@ body:nth-child(2) > footer {
         padding:  5px;
     }
 
-    form div {
-        /*border: solid 2px red;*/
-        margin: 5px;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
 
-    }
 
 
 
@@ -317,49 +372,7 @@ body:nth-child(2) > footer {
 
     /* -- ID's -- */
 
-    #form_checkboxes {
-        display: block;
 
-    }
-    #form_section {
-        box-shadow: 0 2px 8px var(--lightGrey);
-        padding: 5px;
-    }
-    #api_form {
-        font-size: large;
-        /*border: solid 2px purple;*/
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 5px;
-    }
-
-    #api_form h4 {
-        font-size: large;
-    }
-
-    #input_div label, #input_div input, #input_div button  {
-        margin: 5px;
-        font-size: large;
-    }
-
-    #input_div input {
-        height: 30px;
-        width: 100%;
-        padding-left: 5px;
-    }
-    ::placeholder {
-        padding-left: 5px;
-    }
-    #submit_button {
-        width: 50%;
-    }
-
-    #api_error_message {
-        color: red;
-        text-align: center;
-        padding-top: 5px;
-    }
 
     #image_main {
         width: auto;
@@ -371,9 +384,7 @@ body:nth-child(2) > footer {
         height: 250px;
     }
 
-    #form_header{
-        font-style: normal;
-    }
+
 
     /* ------------------------------------ DeskTop-Footer ------------------------------------  */
 
