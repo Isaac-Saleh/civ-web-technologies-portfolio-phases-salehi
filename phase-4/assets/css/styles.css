@@ -100,21 +100,6 @@ main aside > section {
     height: 0;
 }
 
-form div {
-    /*border: solid 2px red;*/
-    margin: 5px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-}
-
-#form_section{ /*For the purpose of phase 4 */
-    visibility: visible;
-    height: fit-content;
-}
-
 /* -- Classes --*/
 
 .main-content {
@@ -139,54 +124,6 @@ form div {
 
 
 /* -- ID's -- */
-
-#form_checkboxes {
-    display: block;
-
-}
-#form_section {
-    box-shadow: 0 2px 8px var(--lightGrey);
-    padding: 5px;
-}
-#api_form {
-    font-size: large;
-    /*border: solid 2px purple;*/
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 5px;
-}
-
-#api_form h4 {
-    font-size: large;
-}
-
-#input_div label, #input_div input, #input_div button  {
-    margin: 5px;
-    font-size: large;
-}
-
-#input_div input {
-    height: 30px;
-    width: 100%;
-    padding-left: 5px;
-}
-::placeholder {
-    padding-left: 5px;
-}
-#submit_button {
-    width: 50%;
-}
-
-#api_error_message {
-    color: red;
-    text-align: center;
-    padding-top: 5px;
-}
-
-#form_header{
-    font-style: normal;
-}
 
 #image_banner {
     width: 100%;
@@ -217,6 +154,76 @@ form div {
 }
 
 
+/* -- form CSS -- */
+
+.disabled {
+    /*visibility: hidden;*/
+    /*height: 0;*/
+}
+.parameter_input {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+form div {
+    /*border: solid 2px red;*/
+    margin: 5px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+
+#form_section{ /*For the purpose of phase 4 */
+    visibility: visible;
+    height: fit-content;
+}
+#form_header{
+    font-style: normal;
+}
+
+#api_error_message {
+    color: red;
+    text-align: center;
+    padding-top: 5px;
+}
+
+#form_section {
+    box-shadow: 0 2px 8px var(--lightGrey);
+    padding: 5px;
+}
+#api_form {
+    font-size: large;
+    /*border: solid 2px purple;*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+}
+
+#api_form h4 {
+    font-size: large;
+}
+
+#lorem-ipsum, #password_length {
+    width: 35%;
+}
+
+::placeholder {
+    padding-left: 5px;
+}
+#submit_button {
+    width: 50%;
+}
+
+.form_checkboxes {
+    display: block;
+
+}
 
 /* ------------------------------------ Footer ------------------------------------ */
 

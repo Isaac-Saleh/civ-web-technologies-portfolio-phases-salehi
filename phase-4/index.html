@@ -203,24 +203,43 @@
                 <section>
                     <form id="api_form">
                         <h4 id="form_header">Pick From the following API's</h4>
-                        <div id="form_checkboxes">
-                            <input type="checkbox"
-                                id="loremipsum" name="loremipsum"
+                        <div class="form_checkboxes">
+                            <input type="radio"
+                                id="loremipsum" name="radio-selection"
                                 value="yes">
                             <label for="loremipsum">Lorem-Ipsum Generator</label>
                             <br>
-                            <input type="checkbox"
-                                   id="password_generator" name="password_generator"
+                            <input type="radio"
+                                   id="password_generator" name="radio-selection"
                                    value="yes">
                             <label for="password_generator">Password Generator</label>
                         </div>
-                        <div id="input_div">
-                            <label for="form_input">Input</label>
-                            <input type="text" id="form_input"
-                                placeholder="Enter a number">
+                        <div id="input_lorem-ipsum_div" class = "disabled parameter_input">
+                            <label for="lorem-ipsum">Paragraphs: </label>
+                            <input type="number" id="lorem-ipsum"
+                                placeholder="">
 
-                            <button type="submit" id="submit_button">Submit</button>
+
                         </div>
+                        <button type="submit" id="submit_button_lorem-ipsum" class="disabled parameter_input">Submit</button>
+                        <div id="input_password_div" class = "disabled parameter_input">
+                            <label for="password_length">Password Length: </label>
+                            <input type="number" id="password_length"
+                                   placeholder="number">
+                            <label>Include Special Characters?</label>
+                            <div class="form_checkboxes">
+                                <input type="radio"
+                                       id="include_special_chars_yes" name="include_special_chars"
+                                       value="yes">
+                                <label for="include_special_chars_yes">Yes</label>
+                                <br>
+                                <input type="radio"
+                                        id="include_special_chars_no" name="include_special_chars"
+                                        value="no">
+                                <label for="include_special_chars_no">No</label>
+                            </div>
+                        </div>
+                        <button type="submit" id="submit_button_password" class="disabled parameter_input"">Submit</button>
                         <div>
                             <h4>Result</h4>
                             <p id="api_error_message">ERROR: response unsuccessful. Please try again.</p>
