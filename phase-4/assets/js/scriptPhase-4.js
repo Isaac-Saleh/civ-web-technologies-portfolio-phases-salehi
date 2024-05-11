@@ -8,6 +8,7 @@ let url = '';
 function urlViaCheckboxSelection() {
     if(document.getElementById('loremipsum').checked) {
         url = url1;
+        document.getElementById('input_lorem-ipsum_div').classList.remove('disabled')
 
     }
     else if(document.getElementById('password_generator').checked) {
@@ -55,10 +56,10 @@ function fetchLoremIpsum(url) {
 function fetchPassword(url) {
     let length = parseInt(document.getElementById('password_length').value)
     console.log(length)
-    // if(length < 8) {
-    //     alert("We recommend Password Length to be greater than 8 characters")
-    //     return;
-    // }
+    if(length < 8) {
+        alert("We recommend Password Length to be greater than 8 characters")
+        return;
+    }
     fetch(url + length, {
         method: 'GET',
         headers: {'X-Api-Key': API_KEY},
@@ -95,7 +96,26 @@ function onButtonClick (event) {
     else alert('You must select an API to call!')
 }
 
+function formFieldVisability() {
 
+    if(document.getElementById('loremipsum').checked) {
+        document.getElementById('api_output').textContent = '';
+        document.getElementById('input_lorem-ipsum_div').classList.remove('disabled')
+        document.getElementById('submit_button_lorem-ipsum').classList.remove('disabled')
+        document.getElementById('input_password_div').classList.add('disabled')
+        document.getElementById('submit_button_password').classList.add('disabled')
+    }
+    else if(document.getElementById('password_generator').checked) {
+        document.getElementById('api_output').textContent = '';
+        document.getElementById('input_password_div').classList.remove('disabled')
+        document.getElementById('submit_button_password').classList.remove('disabled')
+        document.getElementById('input_lorem-ipsum_div').classList.add('disabled')
+        document.getElementById('submit_button_lorem-ipsum').classList.add('disabled')
+    }
+}
+
+document.getElementById('loremipsum').addEventListener('click', formFieldVisability)
+document.getElementById('password_generator').addEventListener('click', formFieldVisability)
 document.getElementById('submit_button_lorem-ipsum').addEventListener("click", onButtonClick)
 document.getElementById('submit_button_password').addEventListener("click", onButtonClick)
 

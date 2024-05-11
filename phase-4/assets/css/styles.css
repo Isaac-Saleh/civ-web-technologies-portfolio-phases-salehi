@@ -157,8 +157,8 @@ main aside > section {
 /* -- form CSS -- */
 
 .disabled {
-    /*visibility: hidden;*/
-    /*height: 0;*/
+    visibility: hidden;
+    height: 0;
 }
 .parameter_input {
     /*border: red solid 2px;*/
