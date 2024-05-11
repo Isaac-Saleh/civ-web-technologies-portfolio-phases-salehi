@@ -228,6 +228,17 @@ form div {
 
 }
 
+#outputAside {
+    max-width: 250px;
+    max-height: 250px;
+    overflow-y: auto;
+    transition: max-height 0.5s, max-width 0.5s;
+}
+
+.hr {
+    border: dashed 1px black;
+    width: 80%;
+}
 /* ------------------------------------ Footer ------------------------------------ */
 
 body:nth-child(2) > footer {
