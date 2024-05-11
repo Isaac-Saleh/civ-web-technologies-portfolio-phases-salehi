@@ -161,10 +161,13 @@ main aside > section {
     /*height: 0;*/
 }
 .parameter_input {
+    /*border: red solid 2px;*/
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+    margin: 5px;
+    padding: 7px;
 }
 
 form div {
@@ -210,7 +213,7 @@ form div {
 }
 
 #lorem-ipsum, #password_length {
-    width: 35%;
+    width: 40px;
 }
 
 ::placeholder {

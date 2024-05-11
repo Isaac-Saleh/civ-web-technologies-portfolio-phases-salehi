@@ -201,31 +201,34 @@
                     <h3>Generator</h3>
                 </header>
                 <section>
-                    <form id="api_form">
+                    <form id="api_form" action="">
                         <h4 id="form_header">Pick From the following API's</h4>
                         <div class="form_checkboxes">
                             <input type="radio"
                                 id="loremipsum" name="radio-selection"
-                                value="yes">
+                                value="loremipsum">
                             <label for="loremipsum">Lorem-Ipsum Generator</label>
                             <br>
                             <input type="radio"
                                    id="password_generator" name="radio-selection"
-                                   value="yes">
+                                   value="password" >
                             <label for="password_generator">Password Generator</label>
                         </div>
                         <div id="input_lorem-ipsum_div" class = "disabled parameter_input">
-                            <label for="lorem-ipsum">Paragraphs: </label>
-                            <input type="number" id="lorem-ipsum"
+                            <label for="lorem-ipsum">Number of Paragraphs: </label>
+                            <input type="number" id="lorem-ipsum" name="paragraph"
                                 placeholder="">
 
 
                         </div>
-                        <button type="submit" id="submit_button_lorem-ipsum" class="disabled parameter_input">Submit</button>
+                        <button type="submit" id="submit_button_lorem-ipsum"
+                                class="disabled parameter_input">Submit</button>
+
+
                         <div id="input_password_div" class = "disabled parameter_input">
-                            <label for="password_length">Password Length: </label>
+                            <label for="password_length">Number of Characters (Length): </label>
                             <input type="number" id="password_length"
-                                   placeholder="number">
+                                   placeholder="">
                             <label>Include Special Characters?</label>
                             <div class="form_checkboxes">
                                 <input type="radio"
@@ -239,7 +242,7 @@
                                 <label for="include_special_chars_no">No</label>
                             </div>
                         </div>
-                        <button type="submit" id="submit_button_password" class="disabled parameter_input"">Submit</button>
+                        <button type="submit" id="submit_button_password" class="disabled parameter_input">Submit</button>
                         <div>
                             <h4>Result</h4>
                             <p id="api_error_message">ERROR: response unsuccessful. Please try again.</p>
@@ -277,6 +280,8 @@
         purposes of education and training. Content is Copyright 2007 APC Magazine.
     </footer>
 
+    <script src="https://kit.fontawesome.com/e615babbf9.js" crossorigin="anonymous"></script>
+    <script src="assets/js/scriptPhase-4.js"></script>
 </body>
-<script src="https://kit.fontawesome.com/e615babbf9.js" crossorigin="anonymous"></script>
+
 </html>
