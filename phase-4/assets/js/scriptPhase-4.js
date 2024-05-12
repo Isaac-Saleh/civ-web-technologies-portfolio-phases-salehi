@@ -8,7 +8,6 @@ let url = '';
 function urlViaCheckboxSelection() {
     if(document.getElementById('loremipsum').checked) {
         url = url1;
-        document.getElementById('input_lorem-ipsum_div').classList.remove('disabled')
 
     }
     else if(document.getElementById('password_generator').checked) {
@@ -42,6 +41,7 @@ function fetchLoremIpsum(url) {
         })
         .then(function (data) {
             console.log(data.text)
+            document.getElementById('results_header').innerHTML = "Results"
             const postContainer = document.getElementById('api_output')
             postContainer.innerHTML = data.text;
         })
@@ -73,6 +73,7 @@ function fetchPassword(url) {
         })
         .then(function (data) {
             console.log(data)
+            document.getElementById('results_header').innerHTML = "Results"
             const postContainer = document.getElementById('api_output');
             postContainer.innerHTML = data.random_password;
         })
@@ -93,12 +94,16 @@ function onButtonClick (event) {
     else if(url === url2) {
         fetchPassword(url);
     }
+    //This initially existed before I included the CSS to hide the submit buttons without a click. Left in as an
+        //example of error handling.
     else alert('You must select an API to call!')
+
 }
 
 function formFieldVisability() {
 
     if(document.getElementById('loremipsum').checked) {
+        document.getElementById('results_header').textContent = 'Results will appear below!'
         document.getElementById('api_output').textContent = '';
         document.getElementById('input_lorem-ipsum_div').classList.remove('disabled')
         document.getElementById('submit_button_lorem-ipsum').classList.remove('disabled')
@@ -106,6 +111,7 @@ function formFieldVisability() {
         document.getElementById('submit_button_password').classList.add('disabled')
     }
     else if(document.getElementById('password_generator').checked) {
+        document.getElementById('results_header').textContent = 'Results will appear below!'
         document.getElementById('api_output').textContent = '';
         document.getElementById('input_password_div').classList.remove('disabled')
         document.getElementById('submit_button_password').classList.remove('disabled')

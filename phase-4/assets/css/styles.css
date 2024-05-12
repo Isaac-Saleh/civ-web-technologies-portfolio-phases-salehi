@@ -161,7 +161,6 @@ main aside > section {
     height: 0;
 }
 .parameter_input {
-    /*border: red solid 2px;*/
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -171,7 +170,6 @@ main aside > section {
 }
 
 form div {
-    /*border: solid 2px red;*/
     margin: 5px;
     width: 100%;
     display: flex;
@@ -201,7 +199,6 @@ form div {
 }
 #api_form {
     font-size: large;
-    /*border: solid 2px purple;*/
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -364,18 +361,10 @@ body:nth-child(2) > footer {
         padding: 5px;
     }
 
-    /*aside section section {*/
-    /*    padding-left: 10px;*/
-    /*}*/
-
     aside section footer{
         margin-bottom: 20px;
         padding:  5px;
     }
-
-
-
-
 
 
     /* -- Classes -- */
@@ -393,8 +382,7 @@ body:nth-child(2) > footer {
 
     /* -- ID's -- */
 
-
-
+    
     #image_main {
         width: auto;
         height: 450px;
