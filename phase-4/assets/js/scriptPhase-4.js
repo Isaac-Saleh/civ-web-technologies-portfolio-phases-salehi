@@ -40,13 +40,11 @@ function fetchLoremIpsum(url) {
             throw response.status
         })
         .then(function (data) {
-            console.log(data.text)
             document.getElementById('results_header').innerHTML = "Results"
             const postContainer = document.getElementById('api_output')
             postContainer.innerHTML = data.text;
         })
         .catch(error => {
-            console.log('Error:', error);
             const errorContainer = document.getElementById('api_error_message');
             errorContainer.innerHTML = (`Error: ${error} API call was Unsuccessful` )
 
@@ -55,7 +53,6 @@ function fetchLoremIpsum(url) {
 
 function fetchPassword(url) {
     let length = parseInt(document.getElementById('password_length').value)
-    console.log(length)
     if(length < 8) {
         alert("We recommend Password Length to be greater than 8 characters")
         return;
@@ -72,13 +69,11 @@ function fetchPassword(url) {
             throw response.status;
         })
         .then(function (data) {
-            console.log(data)
             document.getElementById('results_header').innerHTML = "Results"
             const postContainer = document.getElementById('api_output');
             postContainer.innerHTML = data.random_password;
         })
         .catch(error => {
-            console.log('Error:', error);
             const errorContainer = document.getElementById('api_error_message');
             errorContainer.innerHTML = (`Error: ${error} API call was Unsuccessful` )
         });
