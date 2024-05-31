@@ -1,0 +1,407 @@
+:root {
+    --white: #FFFFFF;
+    --lightGrey: #cccccc;
+    --yellow: #fca311;
+    --navy: #14213d;
+    --black: #000000;
+
+    --primaryHeaders: "Roboto Condensed", sans-serif;
+    --storyFont: "Gloria Hallelujah", cursive;
+    --paragraphFont: "Urbanist", sans-serif;
+
+    /*to be retired and replaced with the above colour scheme*/
+    /*--lightGrey: #cccccc;*/
+    /*--grey: #999999;*/
+    /*--darkGrey: #333333;*/
+}
+
+
+/* ------------------------------------ Header ------------------------------------ */
+
+
+
+.top-section {
+    width: 100%;
+}
+
+.top-section > header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: var(--primaryHeaders);
+    font-size: 1.5rem;
+    font-weight: bolder;
+    padding: 10px 20px;
+    height: 50px;
+    color: var(--navy);
+    background-color: var(--yellow);
+}
+
+nav {
+    visibility: hidden;
+    height: 0;
+}
+
+
+
+/* ------------------------------------ Main ------------------------------------ */
+
+
+/* -- Elements -- */
+
+body{
+    height: 100%;
+}
+
+body:nth-child(2) > h3 {
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+h3 {
+    text-align: left;
+    font-family: var(--primaryHeaders);
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px;
+}
+
+main header {
+    font-weight: bolder;
+    text-align: left;
+
+}
+
+main h4 {
+    font-style: italic;
+    font-weight: bold;
+    padding: 5px;
+}
+
+main article {
+    padding: 10px;
+    border: 3px solid var(--black);
+
+}
+
+main p {
+    font-family: var(--paragraphFont);
+    padding-bottom: 15px;
+}
+
+main aside > section {
+    visibility: hidden;
+    height: 0;
+}
+
+/* -- Classes --*/
+
+.main-content {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.main-content-img {
+    padding: 12.5px;
+    display: flex;
+    flex-direction: column;
+    flex-basis: auto;
+}
+
+.story {
+    font-style: italic;
+    font-family: var(--storyFont);
+
+}
+
+
+/* -- ID's -- */
+
+#image_banner {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    justify-items: center;
+
+}
+
+#image_batteries_not_included {
+    width: 100%;
+    height: auto;
+}
+
+#image_reference {
+    font-style: italic;
+    font-size: small;
+}
+
+#image_main {
+    width: auto;
+    height: auto;
+}
+
+#image_aside {
+    height: 0;
+    width: 0;
+}
+
+
+/* -- form CSS -- */
+
+.disabled {
+    visibility: hidden;
+    height: 0;
+}
+.parameter_input {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 5px;
+    padding: 7px;
+}
+
+form div {
+    margin: 5px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+
+#form_section{ /*For the purpose of phase 4 */
+    visibility: visible;
+    height: fit-content;
+}
+#form_header{
+    font-style: normal;
+}
+
+#api_error_message {
+    color: red;
+    text-align: center;
+    padding-top: 5px;
+}
+
+#form_section {
+    box-shadow: 0 2px 8px var(--lightGrey);
+    padding: 5px;
+}
+#api_form {
+    font-size: large;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+}
+
+#api_form h4 {
+    font-size: large;
+}
+
+#lorem-ipsum, #password_length {
+    width: 40px;
+}
+
+::placeholder {
+    padding-left: 5px;
+}
+#submit_button {
+    width: 50%;
+}
+
+.form_checkboxes {
+    display: block;
+
+}
+
+#outputAside {
+    max-width: 250px;
+    max-height: 250px;
+    overflow-y: auto;
+    transition: max-height 0.5s, max-width 0.5s;
+}
+
+.hr {
+    border: dashed 1px black;
+    width: 80%;
+}
+/* ------------------------------------ Footer ------------------------------------ */
+
+body:nth-child(2) > footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 5px 10px;
+    height: 80px;
+    background-color: var(--lightGrey);
+    margin-top: 40px;
+}
+
+
+
+/* ------------------------------------ DeskTop Layout ------------------------------------ */
+
+
+
+@media screen and (min-width: 1200px) {
+
+
+    /* ------------------------------------ DeskTop-Header ------------------------------------ */
+
+    /* -- Elements -- */
+
+    nav {
+        visibility: visible;
+        height: auto;
+        padding: 20px;
+        background-color: var(--navy);
+        box-shadow: 0 8px 8px var(--lightGrey);
+    }
+
+    nav > ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    a:link {
+        color: var(--white);
+        text-decoration: none;
+
+    }
+
+    a:visited {
+        color: var(--yellow);
+    }
+
+    /* -- Classes -- */
+
+    .top-section {
+        position: fixed;
+        top: 0;
+    }
+
+    .top-section > header {
+        justify-content: center;
+        font-size: 2.5em;
+    }
+
+    .fa-bars {
+        visibility: hidden;
+    }
+
+
+
+    /* ------------------------------------ DeskTop-Main ------------------------------------ */
+
+    /* -- Elements -- */
+
+    body:nth-child(2) > h3 {
+        text-align: center;
+        padding-top: 150px;
+        font-size: 2rem;
+    }
+
+    main header {
+        text-align: center;
+    }
+
+    #image_banner {
+        width: 80%;
+    }
+
+    main {
+        height: 100%;
+        margin: auto;
+        padding-top: 20px;
+        align-items: stretch;
+        width: 80%;
+        flex-direction: row;
+    }
+
+    article {
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+        flex-basis: auto;
+        box-shadow: 0 2px 8px var(--lightGrey);
+    }
+
+    aside {
+        min-width: 250px;
+        width: auto;
+        justify-content: start;
+        display: flex;
+        flex-direction: column;
+        border: 3px solid black;
+        margin: 0 0 0 20px;
+        padding: 10px;
+        box-shadow: 0 2px 8px var(--lightGrey);
+    }
+    main aside > section {
+        visibility: visible;
+        height: auto;
+    }
+
+    aside h3 {
+        text-align: left;
+        padding: 5px;
+    }
+
+    aside section footer{
+        margin-bottom: 20px;
+        padding:  5px;
+    }
+
+
+    /* -- Classes -- */
+
+    .main-content {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .main-content-img {
+        width: 40%;
+    }
+
+
+
+    /* -- ID's -- */
+
+
+    #image_main {
+        width: auto;
+        height: 450px;
+    }
+
+    #image_aside {
+        width: auto;
+        height: 250px;
+    }
+
+
+
+    /* ------------------------------------ DeskTop-Footer ------------------------------------  */
+
+
+
+    body:nth-child(2) > footer {
+        margin-top: 40px;
+        font-size: smaller;
+        box-shadow: 0 -3px 8px var(--lightGrey);
+    }
+
+}
