@@ -37,3 +37,9 @@ git push -u origin main
         - phase-3.css
         - phase-4.css
         - phase-5.css
+
+## Tailwind Components
+        - A Sticky Header
+        - A Navigation bar
+        - A Horizontal Card
+        - A Footer
