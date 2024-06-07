@@ -9,12 +9,12 @@
     <title>YOUR NAME | Web Tech | Cert 4 Prog</title>
     
 </head>
-<body>
+<body class="flex flex-col h-screen justify-between">
 <header class="sticky  text-blue-950">
-    <div class="bg-amber-600 flex flex-row justify-between p-2
+    <div class="bg-amber-600 grid grid-cols-12
       text-3xl">
-    <h1>Certificate IV in IT (Programming) Web Tech Portfolio</h1>
-        <img src="https://placehold.co/64?text=logo" alt="Logo">
+    <h1 class="grid col-start-4 col-span-8 items-center ">Certificate IV in IT (Programming) Web Tech Portfolio</h1>
+        <img class="justify-self-end p-2" src="https://placehold.co/64?text=logo" alt="Logo">
     </div>
     <nav>
         <ul class=" bg-blue-950 flex flex-row justify-evenly p-2 text-xl text-white">
@@ -27,7 +27,7 @@
         </ul>
     </nav>
 </header>
-<main>
+<main class="mb-auto">
     <article>
         <header>
             <h2 class="text-xl font-bold text-gray-500">Certificate IV in IT (Programming)</h2>
@@ -52,13 +52,13 @@
         </div>
     </article>
 </main>
-<footer>
-    <section>
-        <img src="https://placehold.co/64?text=logo" alt="Logo">
+<footer class="flex flex-col p-1 bg-gray-400">
+    <section class="flex  flex-row justify-evenly items-center ">
+        <img src="https://placehold.co/64?text=logo" alt="Logo" class="max-h-16">
         <p>© Copyright 2023 Adrian Gould and YOUR NAME. All rights reserved.</p>
     </section>
-    <section>
-        <ul>
+    <section >
+        <ul class="flex flex-row justify-evenly">
             <li><a href="#">North Metro TAFE</a></li>
             <li><a href="#">ScreenCraft Dev Sites</a></li>
             <li><a href="#">Contact Us</a></li>
